@@ -15,6 +15,41 @@ variable "tg_bot_key" {
   description = "токен для доступа к тг боту"
 }
 
+
+# Функции
+
+variable "face_detection_function" {
+  type        = string
+  description = "функция обнаружения лиц"
+  default     = "vvot21-face-detection"
+}
+
+variable "face_cut_function" {
+  type        = string
+  description = "Название обрезания лиц"
+  default     = "vvot21-face-cut"
+}
+
+
+variable "bot_function" {
+  type        = string
+  description = "функции тг бота"
+  default     = "vvot21-boot"
+}
+
+# Бакеты
+
+variable "photos_bucket" {
+  type        = string
+  description = "бакет для оригинальных фотографий"
+  default     = "vvot21-photo"
+}
+
+variable "faces_bucket" {
+  type        = string
+  description = "бакет для вырезанных фотографий лиц"
+  default     = "vvot21-faces"
+}
 # Сервисные аккаунты
 
 variable "sa_key_file_path" {
